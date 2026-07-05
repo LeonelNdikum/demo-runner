@@ -1,8 +1,7 @@
-FROM eclipse-temurin:8-jre-jammy
+FROM eclipse-temurin:8-jre-alpine
 
 EXPOSE 8080
 
-COPY build/libs/*.jar /usr/app/app.jar
-WORKDIR /usr/app
+COPY build/libs/demo-runner-0.0.1-SNAPSHOT.jar /usr/app/
 
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "my-app-1.0-SNAPSHOT.jar"]
